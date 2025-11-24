@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Aura Productions</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <h1 class="brand-title">AURA PRODUCTIONS</h1>
+        <p class="brand-tagline">Cinematic AI-Generated Commercials for Modern Brands</p>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="section-inner">
+      <h2>Contact & Booking</h2>
+      <p>Use the form below to tell us about your business, your offer, and which package you’re interested in. We’ll follow up with ideas and next steps.</p>
+
+      <form class="contact-form" action="https://example.com/your-form-endpoint" method="POST">
+        <!-- Replace the action URL with a real endpoint (e.g., Formspree) later -->
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="business">Business / Brand Name</label>
+        <input id="business" name="business" type="text" />
+
+        <label for="package">Package You're Interested In</label>
+        <input id="package" name="package" type="text" placeholder="$90, $150, $555, or $1,222" />
+
+        <label for="message">Project Details</label>
+        <textarea id="message" name="message" placeholder="Tell us about your business, target audience, and goals for the video." required></textarea>
+
+        <button type="submit" class="cta">Send Message</button>
+      </form>
+
+      <p style="margin-top:16px; font-size:0.9rem; color:#bfb7e8;">
+        Prefer direct payment? You can also send payment first via Venmo, PayPal, or Cash App from the Pricing page and include your receipt in this message.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 <span>AURA PRODUCTIONS</span> — All Rights Reserved
+  </footer>
+
+</body>
+</html>
