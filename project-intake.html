@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Intake Form — Aura Productions</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Shared Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <h1 class="brand-title">AURA PRODUCTIONS</h1>
+      <p class="brand-tagline">Cinematic AI-Generated Commercials for Modern Brands</p>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="pricing.html">Back to Pricing</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section">
+  <div class="section-inner">
+    <h2>Project Intake Form</h2>
+    <p>Please fill out the details below so we can begin planning your commercial.</p>
+
+    <!-- The form -->
+    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+      <!-- Auto-filled package (reads from URL) -->
+      <label for="package">Selected Package</label>
+      <input id="package" name="package" type="text" readonly />
+
+      <label for="name">Your Name</label>
+      <input id="name" name="name" type="text" required />
+
+      <label for="email">Your Email</label>
+      <input id="email" name="email" type="email" required />
+
+      <label for="business">Business / Brand Name</label>
+      <input id="business" name="business" type="text" required />
+
+      <label for="details">Tell us about your project</label>
+      <textarea id="details" name="details" required placeholder="
+1. What does your business sell?
+2. Who is your target audience?
+3. What problem do you solve for customers?
+4. What platform is this video for? (TikTok, IG Reel, YouTube, Website?)
+5. What style do you want? (Cinematic, fast-paced, emotional, luxury, bold?)
+6. Do you want a voiceover? Male/Female? Tone?
+7. Any example videos or references?
+8. What is your main message or call-to-action?
+9. What brand colors or vibes should we match?
+10. Any deadlines or special requirements?
+"></textarea>
+
+      <input type="hidden" name="_redirect" value="https://wemirkg.github.io/AURAProductions/thank-you.html">
+
+      <button type="submit" class="cta">Submit Project Details</button>
+    </form>
+
+  </div>
+</section>
+
+<footer>
+  © 2025 <span>AURA PRODUCTIONS</span> — All Rights Reserved
+</footer>
+
+<!-- Script to auto-fill package name -->
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const pkg = urlParams.get("package") || "Not Selected";
+  document.getElementById("package").value = pkg;
+</script>
+
+</body>
+</html>
