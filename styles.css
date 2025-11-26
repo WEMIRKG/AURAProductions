@@ -795,3 +795,34 @@ footer span {
   }
 }
 
+/* Primary CTA button */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 30px;
+  margin-top: 18px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #f6c85c, #d79a2d);
+  color: #111;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  box-shadow: 0 0 30px rgba(246, 200, 92, 0.5);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 40px rgba(246, 200, 92, 0.7);
+  filter: brightness(1.05);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 0 18px rgba(246, 200, 92, 0.5);
+}
