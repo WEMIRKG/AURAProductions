@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Intake • Aura Productions Commercials</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header class="site-header">
+    <div class="nav-container">
+      <h1 class="logo">AURA PRODUCTIONS COMMERCIALS</h1>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+        <a href="term.html">Terms of Use</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section contact-page">
+      <div class="section-inner">
+
+        <!-- STEP HEADER -->
+        <header class="intake-header fade-in">
+          <p class="eyebrow">Step 2 · Tell us about your project</p>
+          <h2>Project Intake Form</h2>
+          <p class="lead">
+            You’ve picked a package — now give us enough detail so we can design your
+            <strong>perfect fantasy commercial</strong>. The more specific you are,
+            the better we can direct the visuals, voice, and music.
+          </p>
+
+          <div class="intake-steps">
+            <div class="step-badge done">1. Choose Package</div>
+            <div class="step-badge current">2. Answer Questions</div>
+            <div class="step-badge">3. Pay & Secure Your Slot</div>
+          </div>
+        </header>
+
+        <!-- LAYOUT: FORM + SIDE INFO -->
+        <div class="intake-layout fade-in-delayed">
+
+          <!-- MAIN FORM -->
+          <div class="intake-main">
+            <!-- Replace this action URL with your Formspree intake form URL -->
+            <form
+              action="https://formspree.io/f/mjkdzwaq"
+              method="POST"
+              class="contact-form"
+            >
+              <!-- Helps you quickly see type of submission in your inbox -->
+              <input type="hidden" name="form_type" value="Aura Project Intake" />
+
+              <!-- Selected Package (auto-filled from URL) -->
+              <label for="package">Selected Package</label>
+              <input
+                id="package"
+                name="package"
+                type="text"
+                readonly
+                placeholder="Package name will appear here"
+              />
+
+              <label for="price">Package Price</label>
+              <input
+                id="price"
+                name="price"
+                type="text"
+                readonly
+                placeholder="$90, $150, $555, or $1,222"
+              />
+
+              <hr class="intake-divider" />
+
+              <!-- Contact basics -->
+              <label for="name">Your Name</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Your full name"
+                required
+              />
+
+              <label for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="you@example.com"
+                required
+              />
+
+              <label for="business">Business / Brand Name</label>
+              <input
+                id="business"
+                name="business"
+                type="text"
+                placeholder="Brand or company we’re creating this for"
+                required
+              />
+
+              <label for="links">Website / Social Links</label>
+              <textarea
+                id="links"
+                name="links"
+                rows="2"
+                placeholder="Link any sites or social profiles (Instagram, TikTok, YouTube, website, etc.)."
+              ></textarea>
+
+              <hr class="intake-divider" />
+
+              <!-- Goals & offer -->
+              <label for="goal">Main Goal of This Commercial</label>
+              <textarea
+                id="goal"
+                name="goal"
+                rows="3"
+                placeholder="EXAMPLES: Get more bookings, sell out a drop, launch a new offer, retarget warm audience, build brand awareness, etc. What does ‘success’ look like?"
+                required
+              ></textarea>
+
+              <label for="offer">What Are You Selling / Promoting?</label>
+              <textarea
+                id="offer"
+                name="offer"
+                rows="3"
+                placeholder="Describe your product, service, or offer. What makes it special? Include key features, benefits, and price range."
+                required
+              ></textarea>
+
+              <label for="cta">What Should Viewers Do After Watching?</label>
+              <textarea
+                id="cta"
+                name="cta"
+                rows="2"
+                placeholder="EXAMPLES: Click link in bio, book a call, DM a keyword, visit a website, buy now, join a waitlist, etc."
+                required
+              ></textarea>
+
+              <hr class="intake-divider" />
+
+              <!-- Audience & platform -->
+              <label for="audience">Who Is Your Target Audience?</label>
+              <textarea
+                id="audience"
+                name="audience"
+                rows="3"
+                placeholder="Who are you trying to reach? Include age range, location, interests, problems, and anything you know about them."
+                required
+              ></textarea>
+
+              <label for="platforms">Where Will This Video Live?</label>
+              <textarea
+                id="platforms"
+                name="platforms"
+                rows="2"
+                placeholder="EXAMPLES: Instagram Reels, TikTok, YouTube, Facebook ads, website hero, email promo, etc."
+                required
+              ></textarea>
+
+              <label for="style">
+                Desired Tone & Style
+                <span class="field-hint">(You can paste multiple adjectives)</span>
+              </label>
+              <textarea
+                id="style"
+                name="style"
+                rows="3"
+                placeholder="EXAMPLES: Cinematic and dramatic, energetic and hype, clean and minimal, luxury and slow-motion, emotional storytelling, humorous, etc."
+                required
+              ></textarea>
+
+              <label for="references">
+                Visual References / Inspiration
+                <span class="field-hint">(Optional but very powerful)</span>
+              </label>
+              <textarea
+                id="references"
+                name="references"
+                rows="3"
+                placeholder="Drop links to ads, movies, music videos, or creators whose style you like. Tell us what you like about them (colors, pacing, camera style, transitions, etc.)."
+              ></textarea>
+
+              <hr class="intake-divider" />
+
+              <!-- Logistics -->
+              <label for="deadline">Deadline or Launch Date</label>
+              <input
+                id="deadline"
+                name="deadline"
+                type="text"
+                placeholder="Any key dates or timelines we should know about?"
+              />
+
+              <label for="assets">
+                Assets You Already Have
+                <span class="field-hint">(Logo, brand colors, scripts, footage, etc.)</span>
+              </label>
+              <textarea
+                id="assets"
+                name="assets"
+                rows="3"
+                placeholder="List what you already have ready (logo files, colors, slogans, footage, testimonials, etc.) and what we need to create from scratch."
+              ></textarea>
+
+              <label for="constraints">
+                Non-Negotiables & Things to Avoid
+              </label>
+              <textarea
+                id="constraints"
+                name="constraints"
+                rows="3"
+                placeholder="Anything we must include (disclaimers, specific phrases) or avoid (topics, colors, styles, words you don’t like)."
+              ></textarea>
+
+              <label for="extra">
+                Anything Else We Should Know?
+              </label>
+              <textarea
+                id="extra"
+                name="extra"
+                rows="3"
+                placeholder="Drop any final thoughts, ideas, worries, or creative dreams for this project."
+              ></textarea>
+
+              <hr class="intake-divider" />
+
+              <label for="heard">How Did You Hear About Aura Productions?</label>
+              <input
+                id="heard"
+                name="heard"
+                type="text"
+                placeholder="Friend, IG, TikTok, YouTube, event, etc."
+              />
+
+              <!-- SUBMIT -->
+              <button type="submit" class="btn-primary intake-submit">
+                Submit Answers & Go to Payment ➜
+              </button>
+            </form>
+          </div>
+
+          <!-- SIDE PANEL: SUMMARY & PAYMENT -->
+          <aside class="intake-side">
+            <div class="info-card">
+              <h3>Package Summary</h3>
+              <p class="disclosure-text">
+                <strong id="packageNameDisplay">Selected package</strong>
+                <br />
+                <span id="priceDisplay"></span>
+              </p>
+              <p class="disclosure-text">
+                You’re not just buying a video file — you’re getting strategy, AI-enhanced visuals,
+                professional voice, and custom pacing designed to sell your offer.
+              </p>
+              <p class="disclosure-text">
+                If you realize you chose the wrong package, you can go back to the
+                <a href="pricing.html">Pricing</a> page and pick a different one.
+              </p>
+            </div>
+
+            <div class="info-card payment-card">
+              <h3>Step 3 · Pay & Secure Your Slot</h3>
+              <p class="disclosure-text">
+                After you submit your answers, use one of the payment options below to lock in your project.
+                Be sure to match the amount for the package you selected.
+              </p>
+
+              <div class="payment-buttons">
+                <!-- TODO: replace # with your actual payment links -->
+                <a href="#" target="_blank" class="pay-btn venmo">Pay with Venmo</a>
+                <a href="#" target="_blank" class="pay-btn paypal">Pay with PayPal</a>
+                <a href="#" target="_blank" class="pay-btn cashapp">Pay with Cash App</a>
+              </div>
+
+              <p class="disclosure-text" style="margin-top:8px;">
+                Once payment and this form are both submitted, we’ll review everything and follow up
+                via email with next steps, timeline, and any script ideas.
+              </p>
+            </div>
+
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SCRIPT: read ?package= and ?price= from URL -->
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const pkg = params.get("package");
+    const price = params.get("price");
+
+    const packageInput = document.getElementById("package");
+    const priceInput = document.getElementById("price");
+    const pkgDisplay = document.getElementById("packageNameDisplay");
+    const priceDisplay = document.getElementById("priceDisplay");
+
+    if (pkg && packageInput) packageInput.value = pkg;
+    if (pkg && pkgDisplay) pkgDisplay.textContent = pkg;
+    if (price && priceInput) priceInput.value = price;
+    if (price && priceDisplay) priceDisplay.textContent = price;
+  </script>
+</body>
+</html>
