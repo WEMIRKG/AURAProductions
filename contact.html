@@ -25,29 +25,59 @@
   <div class="section-inner">
 
     <h2>Contact & Inquiries</h2>
-    <p>If you have any questions, custom requests, or want clarity before ordering, send us a message below. We typically reply within 24 hours.</p>
+    <p>
+      Ready to talk about your next commercial, or just have a few questions first?  
+      Drop your details below and tell us what you’re thinking — strategy, story ideas, custom projects, or anything in between.
+      We typically reply within <strong>24 hours</strong>.
+    </p>
 
     <!-- 🚀 Contact Form -->
     <form action="https://formspree.io/f/mjkdzwaq" method="POST" class="contact-form">
+      <!-- Optional subject tag for your inbox -->
+      <input type="hidden" name="subject" value="New Aura Productions Inquiry" />
 
       <label for="name">Name</label>
-      <input id="name" name="name" type="text" required />
+      <input
+        id="name"
+        name="name"
+        type="text"
+        placeholder="Your full name"
+        required
+      />
 
       <label for="email">Email</label>
-      <input id="email" name="email" type="email" required />
+      <input
+        id="email"
+        name="email"
+        type="email"
+        placeholder="you@example.com"
+        required
+      />
 
       <label for="business">Business / Brand Name (Optional)</label>
-      <input id="business" name="business" type="text" />
+      <input
+        id="business"
+        name="business"
+        type="text"
+        placeholder="Brand, company, or project name"
+      />
 
-      <label for="inquiry">Your Inquiry</label>
-      <textarea id="inquiry" name="inquiry" placeholder="Ask us anything — custom projects, pricing questions, ideas, support, etc." required></textarea>
+      <label for="inquiry">What can we help you with?</label>
+      <textarea
+        id="inquiry"
+        name="inquiry"
+        rows="6"
+        placeholder="Tell us a bit about your brand, what you’re trying to achieve, and any ideas or questions you already have."
+        required
+      ></textarea>
 
       <!-- Submit Button -->
       <button type="submit" class="btn-primary">Send Inquiry ➜</button>
     </form>
 
     <p class="pay-note">
-      Prefer direct payment? Venmo, PayPal, and CashApp details are listed on the Pricing page.
+      Prefer direct payment? You can use Venmo, PayPal, or Cash App — details are listed on the
+      <a href="pricing.html">Pricing</a> page.
     </p>
 
   </div>
