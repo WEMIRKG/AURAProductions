@@ -462,3 +462,28 @@ footer span {
     padding-top: 16px;
   }
 }
+/* Top navigation bar */
+.site-header { ... }
+.nav-container { ... }
+.logo { ... }
+.main-nav a { ... }
+.main-nav a.active::after { ... }
+.section { ... }
+.section-inner h2 { ... }
+.section-inner p { ... }
+.btn-primary { ... }
+.btn-primary:hover { ... }
+.btn-primary:active { ... }
+<html>
+  <head>   ← no changes here
+  <body>
+
+    🔻 place NEW header here
+    <header class="site-header">...</header>
+
+    🔻 your page content starts here
+    <section class="section">...</section>
+
+  </body>
+</html>
+
