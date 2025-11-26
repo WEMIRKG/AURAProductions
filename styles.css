@@ -885,3 +885,118 @@ footer span {
   color: #f6c85c;
   text-decoration: underline;
 }
+/* ===== INTAKE PAGE LAYOUT ===== */
+
+.intake-header {
+  margin-bottom: 24px;
+}
+
+.intake-steps {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.step-badge {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  color: rgba(249, 250, 251, 0.8);
+  background: rgba(15, 23, 42, 0.7);
+}
+
+.step-badge.done {
+  border-color: #22c55e;
+  color: #bbf7d0;
+}
+
+.step-badge.current {
+  border-color: #f6c85c;
+  color: #fef3c7;
+}
+
+.intake-layout {
+  display: grid;
+  gap: 24px;
+}
+
+@media (min-width: 900px) {
+  .intake-layout {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  }
+}
+
+.intake-main {
+  min-width: 0;
+}
+
+.intake-side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.intake-divider {
+  border: none;
+  border-top: 1px solid rgba(148, 163, 184, 0.4);
+  margin: 18px 0;
+}
+
+.field-hint {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin-left: 4px;
+}
+
+/* Submit button spacing */
+.intake-submit {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Payment buttons */
+
+.payment-card {
+  background: radial-gradient(circle at top left,
+    rgba(246, 200, 92, 0.12),
+    rgba(15, 23, 42, 0.95)
+  );
+}
+
+.payment-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.pay-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  background: rgba(15, 23, 42, 0.9);
+  color: #e5e7eb;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.pay-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 20px rgba(15, 23, 42, 0.8);
+  border-color: #f6c85c;
+}
+
+.pay-btn.venmo { /* you can theme these later if you want */ }
+.pay-btn.paypal {}
+.pay-btn.cashapp {}
