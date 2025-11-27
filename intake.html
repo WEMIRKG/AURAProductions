@@ -292,37 +292,45 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector("form");
     const packageInput = document.getElementById("package");
 
-    // PayPal payment URLs for each package
-    const paymentLinks = {
-        "Quick Social Ad": "https://www.paypal.com/ncp/payment/9LBLEU9HM7WAA",
-        "Basic Social Ad": "https://www.paypal.com/ncp/payment/9QHYSBGP6WKS6",
-        "Standard Commercial": "https://www.paypal.com/ncp/payment/F38T4ZL9JB33A",
-        "Premium Cinematic Promo": "https://www.paypal.com/ncp/payment/JHPGSQ7EAERMG"
+    // Your PayPal payment links
+    const links = {
+        quick:   "https://www.paypal.com/ncp/payment/9LBLEU9HM7WAA",  // Quick Social Ad - $90
+        basic:   "https://www.paypal.com/ncp/payment/9QHYSBGP6WKS6",  // Basic Social Ad - $150
+        standard:"https://www.paypal.com/ncp/payment/F38T4ZL9JB33A",  // Standard Commercial - $555
+        premium: "https://www.paypal.com/ncp/payment/JHPGSQ7EAERMG"   // Premium Cinematic Promo - $1,222
     };
 
-    // Handle form submission
+    function getPaypalURL(packageText) {
+        if (!packageText) return null;
+
+        const value = packageText.toLowerCase();
+
+        if (value.includes("quick"))    return links.quick;
+        if (value.includes("basic"))    return links.basic;
+        if (value.includes("standard")) return links.standard;
+        if (value.includes("premium"))  return links.premium;
+
+        return null;
+    }
+
     form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Stop normal submission
+        event.preventDefault(); // stop normal submit
 
-        const selectedPackage = packageInput.value.trim();
-
-        // Lookup PayPal URL
-        const paypalURL = paymentLinks[selectedPackage];
+        const selectedPackageText = packageInput.value.trim();
+        const paypalURL = getPaypalURL(selectedPackageText);
 
         if (!paypalURL) {
-            alert("No payment link found for this package.");
+            alert("No payment link found for this package. Please make sure a package is selected.");
             return;
         }
 
-        // Send to Formspree THEN redirect to PayPal
+        // Send intake answers to Formspree first
         fetch(form.action, {
             method: "POST",
             body: new FormData(form),
-            headers: {
-                "Accept": "application/json"
-            }
+            headers: { "Accept": "application/json" }
         }).finally(() => {
-            // Redirect to PayPal checkout
+            // Then send them to the correct PayPal checkout
             window.location.href = paypalURL;
         });
     });
