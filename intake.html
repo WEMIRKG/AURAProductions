@@ -287,5 +287,47 @@
       </div>
     </section>
   </main>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    const packageInput = document.getElementById("package");
+
+    // PayPal payment URLs for each package
+    const paymentLinks = {
+        "Quick Social Ad": "https://www.paypal.com/ncp/payment/9LBLEU9HM7WAA",
+        "Basic Social Ad": "https://www.paypal.com/ncp/payment/9QHYSBGP6WKS6",
+        "Standard Commercial": "https://www.paypal.com/ncp/payment/F38T4ZL9JB33A",
+        "Premium Cinematic Promo": "https://www.paypal.com/ncp/payment/JHPGSQ7EAERMG"
+    };
+
+    // Handle form submission
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Stop normal submission
+
+        const selectedPackage = packageInput.value.trim();
+
+        // Lookup PayPal URL
+        const paypalURL = paymentLinks[selectedPackage];
+
+        if (!paypalURL) {
+            alert("No payment link found for this package.");
+            return;
+        }
+
+        // Send to Formspree THEN redirect to PayPal
+        fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: {
+                "Accept": "application/json"
+            }
+        }).finally(() => {
+            // Redirect to PayPal checkout
+            window.location.href = paypalURL;
+        });
+    });
+});
+</script>
+
 </body>
 </html>
