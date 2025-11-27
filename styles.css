@@ -1067,3 +1067,25 @@ footer span {
   display: block;
   border-radius: 18px;
 }
+/* === HERO VIDEOS ROW === */
+
+.hero-videos {
+  margin-top: 24px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-video-item {
+  flex: 1 1 260px;      /* minimum width of each card */
+  max-width: 320px;     /* keeps them from getting huge */
+}
+
+.hero-video-item video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.6);
+}
