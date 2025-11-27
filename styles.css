@@ -203,21 +203,6 @@ body {
 }
 
 /* Make the hero CTA section sit in the middle of the screen */
-.section.lead {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: calc(100vh - 200px); /* adjust 200 up/down if needed */
-  padding: 80px 20px;              /* more breathing room */
-}
-
-/* Inner wrapper stays centered and not too wide */
-.section.lead .section-inner {
-  max-width: 900px;
-  padding: 0 20px;
-  text-align: center;
-}
-
 /* CTA BUTTONS */
 
 .cta,
