@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testimonials • AuraProAI Commercials</title>
+
+  <!-- Your global stylesheet, if you have one -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Page-specific styles -->
+  <style>
+    :root {
+      --ap-bg: #050316;
+      --ap-card: #08041d;
+      --ap-card-soft: #0e0727;
+      --ap-accent: #f6c453;
+      --ap-accent-soft: rgba(246, 196, 83, 0.18);
+      --ap-text-main: #fdf9ff;
+      --ap-text-muted: #c0b5f5;
+      --ap-border: #33255f;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1b1145 0, #050316 55%, #020011 100%);
+      color: var(--ap-text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(5, 3, 22, 0.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(88, 71, 140, 0.7);
+    }
+
+    .nav-container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .logo {
+      margin: 0;
+      font-size: 14px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ap-accent);
+    }
+
+    .main-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .main-nav a {
+      color: var(--ap-text-muted);
+      text-decoration: none;
+      padding-bottom: 2px;
+      border-bottom: 1px solid transparent;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus-visible {
+      color: var(--ap-accent);
+      border-color: var(--ap-accent-soft);
+    }
+
+    .page-main {
+      flex: 1;
+      padding: 64px 20px 80px;
+    }
+
+    @media (min-width: 768px) {
+      .page-main {
+        padding-top: 88px;
+      }
+    }
+
+    .t-wrapper {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .t-hero {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .t-kicker {
+      font-size: 12px;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--ap-accent);
+      margin-bottom: 10px;
+    }
+
+    .t-title {
+      font-size: clamp(2.1rem, 3vw, 2.7rem);
+      margin: 0 0 12px;
+    }
+
+    .t-subtitle {
+      max-width: 620px;
+      margin: 0 auto;
+      color: var(--ap-text-muted);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .t-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .t-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1080px) {
+      .t-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .t-card {
+      position: relative;
+      background: radial-gradient(circle at top left, rgba(246, 196, 83, 0.08), transparent 50%),
+                  var(--ap-card);
+      border-radius: 18px;
+      border: 1px solid var(--ap-border);
+      padding: 22px 20px 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      overflow: hidden;
+    }
+
+    .t-badge {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--ap-text-muted);
+    }
+
+    .t-quote {
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--ap-text-main);
+    }
+
+    .t-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ap-accent);
+    }
+
+    .t-role {
+      font-size: 12px;
+      color: var(--ap-text-muted);
+    }
+
+    .t-tag {
+      margin-top: 4px;
+      align-self: flex-start;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(246, 196, 83, 0.05);
+      border: 1px solid var(--ap-accent-soft);
+      color: var(--ap-text-muted);
+    }
+
+    .t-cta {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .t-cta p {
+      margin: 0 0 18px;
+      color: var(--ap-text-muted);
+      font-size: 14px;
+    }
+
+    .t-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 26px;
+      border-radius: 999px;
+      border: none;
+      background: radial-gradient(circle at top left, #f6c453, #f29b38);
+      color: #150b2d;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.85);
+      cursor: pointer;
+      transition: transform 0.16s ease, box-shadow 0.16s ease, filter 0.16s ease;
+    }
+
+    .t-btn:hover,
+    .t-btn:focus-visible {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.95);
+      filter: brightness(1.02);
+    }
+
+    .site-footer {
+      border-top: 1px solid rgba(60, 48, 104, 0.85);
+      padding: 18px 20px 24px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--ap-text-muted);
+      background: rgba(3, 1, 15, 0.98);
+    }
+
+    .site-footer span {
+      color: var(--ap-accent);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header class="site-header">
+    <div class="nav-container">
+      <h1 class="logo">AURA PRODUCTIONS COMMERCIALS</h1>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="pricing.html">Packages</a>
+        <a href="intake.html">Intake</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="our-why.html">Our Why</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <div class="t-wrapper">
+      <!-- HERO -->
+      <section class="t-hero">
+        <p class="t-kicker">Client Experiences</p>
+        <h1 class="t-title">What it feels like to work with AuraProAI.</h1>
+        <p class="t-subtitle">
+          These are the kinds of reactions we aim for on every project: clarity, confidence, and that
+          “I can’t believe this is mine” feeling when you see your commercial for the first time.
+        </p>
+      </section>
+
+      <!-- TESTIMONIAL GRID -->
+      <section class="t-grid" aria-label="Client testimonials">
+        <!-- Card 1 -->
+        <article class="t-card">
+          <div class="t-badge">Quick Social Ad • $90</div>
+          <p class="t-quote">
+            “AuraProAI gave me a commercial that looked like I spent thousands. The visuals, the pacing,
+            the audio — everything hit perfectly. My engagement doubled in 48 hours.”
+          </p>
+          <div>
+            <div class="t-name">Jordan M.</div>
+            <div class="t-role">Clothing Brand Owner</div>
+          </div>
+          <div class="t-tag">Social Media Launch</div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="t-card">
+          <div class="t-badge">Basic Social Ad • $150</div>
+          <p class="t-quote">
+            “I’ve worked with editors before, but nothing compares to this. The ad captured my brand exactly
+            how I imagined it. People still ask who made it.”
+          </p>
+          <div>
+            <div class="t-name">Maya R.</div>
+            <div class="t-role">Wellness Studio Owner</div>
+          </div>
+          <div class="t-tag">Brand Story Spot</div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="t-card">
+          <div class="t-badge">Standard Commercial • $555</div>
+          <p class="t-quote">
+            “The process was insanely easy. I sent the script, and AuraProAI sent back something that
+            looked like an Apple commercial. I’m coming back for sure.”
+          </p>
+          <div>
+            <div class="t-name">Leo S.</div>
+            <div class="t-role">Content Creator</div>
+          </div>
+          <div class="t-tag">Creator Package</div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="t-card">
+          <div class="t-badge">Premium Cinematic Promo • $1,222</div>
+          <p class="t-quote">
+            “This isn’t AI spam. This feels like a real production studio. I showed the video to investors
+            and it helped close our deal.”
+          </p>
+          <div>
+            <div class="t-name">Brianna T.</div>
+            <div class="t-role">Tech Startup Founder</div>
+          </div>
+          <div class="t-tag">Investor-Facing Promo</div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="t-card">
+          <div class="t-badge">Ongoing Client</div>
+          <p class="t-quote">
+            “Every time I work with AuraProAI, the quality jumps again. They remember my brand, evolve
+            the visuals, and keep my content feeling ahead of the curve.”
+          </p>
+          <div>
+            <div class="t-name">Sam K.</div>
+            <div class="t-role">Online Educator</div>
+          </div>
+          <div class="t-tag">Series of Launch Ads</div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="t-card">
+          <div class="t-badge">First-Time Client</div>
+          <p class="t-quote">
+            “I was nervous to invest at first, but the video paid for itself in the first week.
+            The ad gave my business the confidence and polish it was missing.”
+          </p>
+          <div>
+            <div class="t-name">Renee L.</div>
+            <div class="t-role">Local Service Business</div>
+          </div>
+          <div class="t-tag">Local Awareness Campaign</div>
+        </article>
+      </section>
+
+      <!-- CTA -->
+      <section class="t-cta">
+        <p>
+          Your story could be the next one here. When you’re ready, share your idea and we’ll help you pick
+          the package that fits your vision and your budget.
+        </p>
+        <a href="intake.html" class="t-btn">Start Your Project</a>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2025 <span>AuraProAI</span>. All rights reserved.</div>
+  </footer>
+</body>
+</html>
