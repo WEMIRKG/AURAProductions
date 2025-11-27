@@ -304,5 +304,49 @@
     if (price && priceInput) priceInput.value = price;
     if (price && priceDisplay) priceDisplay.textContent = price;
   </script>
+  <script>
+// When the form is submitted
+document.querySelector(".intake-form").addEventListener("submit", function(e) {
+    e.preventDefault();  // Stop the default form submission
+    
+    // Get selected package name
+    const packageName = document.getElementById("package").value.trim();
+
+    // If for some reason the field is empty
+    if (!packageName) {
+        alert("Please select a package before submitting.");
+        return;
+    }
+
+    // Define redirect URLs based on package
+    let redirectURL = "";
+
+    if (packageName === "Quick Social Ad" || packageName === "$90 - Quick Social Ad") {
+        redirectURL = "https://www.paypal.com/ncp/payment/9LBLEU9HM7WAA";
+    } 
+    else if (packageName === "Basic Social Ad" || packageName === "$150 - Basic Social Ad") {
+        redirectURL = "https://www.paypal.com/ncp/payment/9QHYSBGP6WKS6";
+    } 
+    else if (packageName === "Standard Commercial" || packageName === "$555 - Standard Commercial") {
+        redirectURL = "https://www.paypal.com/ncp/payment/F38T4ZL9JB33A";
+    } 
+    else if (packageName === "Premium Cinematic Promo" || packageName === "$1,222 - Premium Cinematic Promo") {
+        redirectURL = "https://www.paypal.com/ncp/payment/JHPGSQ7EAERMG";
+    } 
+    else {
+        alert("Invalid package selected.");
+        return;
+    }
+
+    // OPTIONAL — send form data to Formspree before redirecting
+    this.submit();
+
+    // After a short delay, redirect to PayPal
+    setTimeout(() => {
+        window.location.href = redirectURL;
+    }, 800);
+});
+</script>
+
 </body>
 </html>
