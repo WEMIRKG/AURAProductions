@@ -58,17 +58,14 @@
               <input type="hidden" name="form_type" value="Aura Intake" />
 
               <!-- Selected Package (auto-filled from URL) -->
-             <label for="package" class="form-label">Selected Package</label>
-              
-   <select id="package" name="package" class="form-select" required>
-  <option value="disabled selected">Choose a package…</option>
-  <option value="$90 – Quick Social Ad">Quick Social Ad</option>
-  <option value="$150 – Basic Social Ad">Basic Social Ad</option>
-  <option value="$555 – Standard Commercial">Standard Commercial</option>
-  <option value="$1,222 – Premium Cinematic Promo">Premium Cinematic Promo</option>
+ <label for="package" class="form-label">Selected Package</label>
+<select id="package" name="package" class="form-select" required>
+  <option value="" disabled selected>Choose a package...</option>
+  <option value="90">Quick Social Ad — $90</option>
+  <option value="150">Basic Social Ad — $150</option>
+  <option value="555">Standard Commercial — $555</option>
+  <option value="1222">Premium Cinematic Promo — $1,222</option>
 </select>
-
-
               <!-- Contact basics -->
               <label for="name">Your Name</label>
               <input
@@ -332,7 +329,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const params = new URLSearchParams(window.location.search);
+    const pkg = params.get('package'); // e.g. "90"
+    const select = document.getElementById('package');
 
+    if (pkg && select) {
+      select.value = pkg; // pre-select matching option
+      // Optional: scroll to the form
+      // select.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  });
+</script>
 
 </body>
 </html>
