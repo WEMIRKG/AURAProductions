@@ -1068,3 +1068,11 @@ footer span {
 .section:last-of-type {
   padding-bottom: 80px;
 }
+.hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #f5d37d;
+  letter-spacing: 6px; /* spreads letters */
+  line-height: 1.6;   /* spreads lines */
+  text-transform: uppercase;
+}
