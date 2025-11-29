@@ -143,17 +143,17 @@ body {
 }
 
 .hero h1 {
-  margin: 0 0 12px;
+  margin: 0 0 18px;
   font-family: "Bebas Neue", system-ui, sans-serif;
-  font-size: clamp(2.8rem, 4vw + 1rem, 4rem);
-  letter-spacing: 0.35em;
+  font-size: clamp(3.2rem, 4vw + 1.2rem, 4.6rem);
+  letter-spacing: 0.45em;   /* spread letters more */
+  line-height: 1.35;        /* spreads lines more */
   text-transform: uppercase;
   color: var(--gold);
   text-shadow:
-    0 0 12px rgba(212, 175, 55, 0.9),
-    0 0 30px rgba(181, 124, 255, 0.8);
+    0 0 15px rgba(212, 175, 55, 1),
+    0 0 38px rgba(181, 124, 255, 0.9);
 }
-
 .hero p {
   max-width: 520px;
   font-weight: 300;
