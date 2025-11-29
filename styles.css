@@ -12,7 +12,7 @@
 
 html {
   scroll-behavior: smooth;
-  height: 80%;
+  height: 100%;
 }
 
 body {
@@ -21,7 +21,7 @@ body {
   background:
     radial-gradient(circle at top, #3a1668 0, #050008 55%, #000 100%);
   color: #f5f5f5;
-  line-height: 1.6;
+  line-height: 2.0;
   min-height: 100vh;
   height: auto;          /* let content extend the page */
   overflow-y: auto;      /* 🔑 always allow vertical scroll */
