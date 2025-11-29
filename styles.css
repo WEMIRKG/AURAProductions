@@ -466,30 +466,6 @@ footer span {
     padding-top: 16px;
   }
 }
-/* Top navigation bar */
-.site-header { ... }
-.nav-container { ... }
-.logo { ... }
-.main-nav a { ... }
-.main-nav a.active::after { ... }
-.section { ... }
-.section-inner h2 { ... }
-.section-inner p { ... }
-.btn-primary { ... }
-.btn-primary:hover { ... }
-.btn-primary:active { ... }
-<html>
-  <head>   ← no changes here
-  <body>
-
-    🔻 place NEW header here
-    <header class="site-header">...</header>
-
-    🔻 your page content starts here
-    <section class="section">...</section>
-
-  </body>
-</html>
 /* ===== NAVBAR / HEADER ===== */
 
 .site-header {
@@ -798,38 +774,6 @@ footer span {
     transform: translateY(0);
   }
 }
-
-/* Primary CTA button */
-
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 14px 30px;
-  margin-top: 18px;
-  border-radius: 999px;
-  border: none;
-  background: linear-gradient(135deg, #f6c85c, #d79a2d);
-  color: #111;
-  font-weight: 700;
-  font-size: 0.95rem;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  cursor: pointer;
-  box-shadow: 0 0 30px rgba(246, 200, 92, 0.5);
-  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 40px rgba(246, 200, 92, 0.7);
-  filter: brightness(1.05);
-}
-
-.btn-primary:active {
-  transform: translateY(0);
-  box-shadow: 0 0 18px rgba(246, 200, 92, 0.5);
-}
 /* ===== TERMS / LEGAL PAGE ===== */
 
 .legal-page {
@@ -1045,113 +989,6 @@ footer span {
 .step-badge.step-red:hover {
   box-shadow: 0 0 18px rgba(255, 77, 77, 0.9);
   filter: brightness(1.1);
-}
-.hero {
-  position: relative;
-}
-
-.hero-video-box {
-  position: absolute;
-  right: 0;
-  top: 40px;
-  width: 48%;
-  max-width: 600px;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 0 40px rgba(0,0,0,0.6);
-}
-
-.hero-video {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 18px;
-}
-/* === HERO VIDEOS ROW === */
-
-.hero-videos {
-  margin-top: 24px;
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.hero-video-item {
-  flex: 1 1 260px;      /* minimum width of each card */
-  max-width: 320px;     /* keeps them from getting huge */
-}
-
-.hero-video-item video {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 16px;
-  box-shadow: 0 0 24px rgba(0, 0, 0, 0.6);
-}
-/* Center the "Transform your business" section content */
-.section.lead .section-inner {
-  max-width: 1100px;      /* keeps it from stretching too wide */
-  margin: 0 auto;         /* centers the block on the page */
-  text-align: center;     /* centers the heading, text, and button */
-}
-
-/* Make the videos sit in the center as a nice grid */
-.hero-videos {
-  display: flex;
-  flex-wrap: wrap;        /* allows multiple rows */
-  justify-content: center;/* centers the videos horizontally */
-  gap: 1.5rem;            /* space between each video */
-  margin-top: 2rem;
-}
-
-/* Control each video card */
-.hero-video-item {
-  flex: 1 1 260px;        /* responsive width */
-  max-width: 360px;
-}
-
-/* Make the actual <video> fill its card */
-.hero-video-item video {
-  width: 100%;
-  display: block;
-  border-radius: 16px;    /* optional: rounded corners */
-}
-/* Override layout for the lead section so it's truly centered */
-.section.lead {
-  display: flex;                /* stop any grid layout */
-  justify-content: center;      /* center the inner container */
-}
-
-.section.lead .section-inner {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;               /* center the block itself */
-  padding: 0 1.5rem;
-  display: flex;                /* stack content vertically */
-  flex-direction: column;
-  align-items: center;          /* center videos + button */
-  text-align: center;           /* center text */
-}
-
-/* Center the video grid inside */
-.section.lead .hero-videos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;      /* center the row of videos */
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.section.lead .hero-video-item {
-  flex: 1 1 260px;
-  max-width: 360px;
-}
-
-.section.lead .hero-video-item video {
-  width: 100%;
-  display: block;
-  border-radius: 16px;
 }
 /* === Lead section: text on left, videos on right === */
 
