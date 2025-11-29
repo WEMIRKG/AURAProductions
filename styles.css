@@ -1076,3 +1076,7 @@ footer span {
   line-height: 1.6;   /* spreads lines */
   text-transform: uppercase;
 }
+body {
+    background: radial-gradient(circle at top, #3a1668, #000 60%);
+    color: #fff;
+}
