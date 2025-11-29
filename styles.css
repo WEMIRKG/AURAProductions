@@ -470,16 +470,6 @@ footer span {
     padding-top: 16px;
   }
 }
-/* ===== NAVBAR / HEADER ===== */
-
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: radial-gradient(circle at top left, #3c1f7b 0, #050110 55%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(14px);
-}
 
 .nav-container {
   max-width: 1100px;
