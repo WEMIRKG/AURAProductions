@@ -145,9 +145,9 @@ body {
 .hero h1 {
   margin: 0 0 18px;
   font-family: "Bebas Neue", system-ui, sans-serif;
-  font-size: clamp(3.2rem, 4vw + 1.2rem, 4.6rem);
-  letter-spacing: 0.45em;   /* spread letters more */
-  line-height: 1.35;        /* spreads lines more */
+  font-size: clamp(3rem, 4vw + 1rem, 4.5rem);
+  letter-spacing: 0.3em;   /* spread letters more */
+  line-height: 1.2;        /* spreads lines more */
   text-transform: uppercase;
   color: var(--gold);
   text-shadow:
@@ -467,7 +467,7 @@ footer span {
   }
 
   .hero {
-    padding-top: 16px;
+    padding-top: 20px;
   }
 }
 
