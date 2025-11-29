@@ -1153,3 +1153,84 @@ footer span {
   display: block;
   border-radius: 16px;
 }
+/* === Lead section: text on left, videos on right === */
+
+.section.lead {
+  padding: 3rem 1.5rem;
+}
+
+.section.lead .section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Two-column layout */
+.lead-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+/* LEFT: text */
+.lead-text {
+  flex: 1;
+  max-width: 480px;
+}
+
+.lead-text h2 {
+  margin-bottom: 0.75rem;
+}
+
+.lead-text p {
+  margin-bottom: 1.5rem;
+}
+
+/* Make sure the button stays nicely sized */
+.lead-text .btn-primary {
+  display: inline-block;
+}
+
+/* RIGHT: videos */
+.lead-videos {
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+}
+
+/* Video grid */
+.hero-videos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.hero-video-item {
+  flex: 1 1 240px;
+  max-width: 300px;
+}
+
+.hero-video-item video {
+  width: 100%;
+  display: block;
+  border-radius: 16px;  /* optional: rounded corners */
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 900px) {
+  .lead-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .lead-text, 
+  .lead-videos {
+    max-width: 100%;
+  }
+
+  .lead-text .btn-primary {
+    margin: 0 auto;
+  }
+}
